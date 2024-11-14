@@ -66,19 +66,29 @@ function hideCountDown() {
 }
 
 function getDaysLeft(endDate, countType) {
-  var today = new Date();
-  var one_day = 1000 * 60 * 60 * 24;
-  var daysLeft = 0;
+  let today = new Date();
+  today.setHours(0, 0, 0, 0); // Set `today` to midnight
+  endDate.setHours(0, 0, 0, 0); // Set `endDate` to midnight
+
+  if (today.getTime() === endDate.getTime()) {
+    return 0; // If today is the end date, no days left
+  }
+
+  let daysLeft = 0;
+  const oneDayInMs = 1000 * 60 * 60 * 24;
 
   if (countType === "working") {
-    while (today <= endDate) {
-      if (today.getDay() !== 0 && today.getDay() !== 6) {
+    let current = new Date(today);
+    while (current < endDate) {
+      const dayOfWeek = current.getDay();
+      if (dayOfWeek !== 5 && dayOfWeek !== 6) {
+        // Exclude Sunday (0) and Saturday (6)
         daysLeft++;
       }
-      today.setDate(today.getDate() + 1);
+      current.setTime(current.getTime() + oneDayInMs);
     }
   } else {
-    daysLeft = Math.ceil((endDate.getTime() - today.getTime()) / one_day);
+    daysLeft = Math.ceil((endDate.getTime() - today.getTime()) / oneDayInMs);
   }
 
   return daysLeft;
