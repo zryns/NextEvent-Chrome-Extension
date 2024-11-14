@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
   let savedEndDate = localStorage.getItem("endDate");
   let savedEventName = localStorage.getItem("eventName");
-  let savedCountType = localStorage.getItem("countType") || "all"; // Default to 'all'
+  let savedCountType = localStorage.getItem("countType") || "all";
 
   if (savedEndDate) {
     document.getElementById("endDate").value = savedEndDate;
@@ -88,11 +88,11 @@ function updateIcon(daysLeft) {
   let iconPath = "";
 
   if (daysLeft > 10) {
-    iconPath = "icon-128.png";
+    iconPath = "assets/128x128.png";
   } else if (daysLeft <= 10 && daysLeft > 0) {
-    iconPath = "icon-48.png";
+    iconPath = "assets/48x48.png";
   } else {
-    iconPath = "icon-16.png";
+    iconPath = "assets/16x16.png";
   }
 
   chrome.action.setIcon({ path: iconPath });
