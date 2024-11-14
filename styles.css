@@ -133,3 +133,56 @@ select#countType {
   text-align: center;
   width: fit-content;
 }
+
+/* Style for the top-right button */
+.top-right-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  color: #294fa7;
+  cursor: pointer;
+}
+
+#listButton i {
+  margin-right: 8px; /* Adjust the value as needed for the gap */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#listButton i:hover {
+  transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Style for the event list popup */
+.event-list {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+/* Style for the event list */
+#eventList {
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-list li {
+  padding: 5px;
+  border-bottom: 1px solid #eee;
+}
