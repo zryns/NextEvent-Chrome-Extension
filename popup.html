@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day Countdown</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="center">
+      <div id="no-date-notice" class="hidden">Select a date to chase!</div>
+      <div class="countdown">
+        <input type="text" id="eventName" placeholder="Enter event name" />
+        <div id="days-left"></div>
+        <div class="text-info">days remaining!</div>
+       
+      </div>
+      <hr />
+      <div class="info">The clock is ticking until</div>
+      <input type="date" id="endDate" />
+      
+      <label for="countType">Count days:</label>
+      <select id="countType">
+        <option value="all">All Days</option>
+        <option value="working">Weekdays Only (Mon-Fri)</option>
+      </select>
+      
+      <!-- <button class="btn" id="submitBtn"><span>SAVE</span></button> -->
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
