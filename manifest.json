@@ -1,11 +1,20 @@
 {
-    "manifest_version": 3,
-    "name": "Day Countdown",
-    "description": "A simple countdown timer to a specific date.",
-    "version": "1.0",
-    "action": {
-      "default_popup": "popup.html"
-    },
-    "permissions": []
-  }
-  
+  "manifest_version": 3,
+  "name": "Day Countdown",
+  "version": "1.0",
+  "description": "A Chrome extension for countdowns",
+  "icons": {
+    "16": "16x16.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "16x16.png",
+      "48": "48x48.png",
+      "128": "128x128.png"
+    }
+  },
+  "permissions": ["storage"]
+}
