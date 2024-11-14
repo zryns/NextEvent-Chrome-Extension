@@ -4,16 +4,16 @@
   "version": "1.0",
   "description": "A Chrome extension for countdowns",
   "icons": {
-    "16": "16x16.png",
-    "48": "48x48.png",
-    "128": "128x128.png"
+    "16": "assets/16x16.png",
+    "48": "assets/48x48.png",
+    "128": "assets/128x128.png"
   },
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
-      "16": "16x16.png",
-      "48": "48x48.png",
-      "128": "128x128.png"
+      "16": "assets/16x16.png",
+      "48": "assets/48x48.png",
+      "128": "assets/128x128.png"
     }
   },
   "permissions": ["storage"]
