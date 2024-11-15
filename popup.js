@@ -67,11 +67,11 @@ function hideCountDown() {
 
 function getDaysLeft(endDate, countType) {
   let today = new Date();
-  today.setHours(0, 0, 0, 0); // Set `today` to midnight
-  endDate.setHours(0, 0, 0, 0); // Set `endDate` to midnight
+  today.setHours(0, 0, 0, 0); 
+  endDate.setHours(0, 0, 0, 0); 
 
   if (today.getTime() === endDate.getTime()) {
-    return 0; // If today is the end date, no days left
+    return 0; 
   }
 
   let daysLeft = 0;
@@ -82,7 +82,6 @@ function getDaysLeft(endDate, countType) {
     while (current < endDate) {
       const dayOfWeek = current.getDay();
       if (dayOfWeek !== 5 && dayOfWeek !== 6) {
-        // Exclude Sunday (0) and Saturday (6)
         daysLeft++;
       }
       current.setTime(current.getTime() + oneDayInMs);

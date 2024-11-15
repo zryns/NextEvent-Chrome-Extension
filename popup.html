@@ -28,11 +28,16 @@
         <option value="working">Weekdays Only (Mon-Fri)</option>
       </select>
 
-      <!-- Add Button with Icon at Top Right -->
+      <!-- Event List Button -->
       <button id="listButton" class="top-right-button">
-        <i class="fa-solid fa-plus"></i>
-        <i class="fa-solid fa-ellipsis"></i>
+        <i class="fa-solid fa-list-check"></i>
       </button>
+
+      <!-- Event List Container -->
+      <div id="eventList" class="hidden">
+        <h3>Event List</h3>
+        <ul id="eventItems"></ul>
+      </div>
 
       <!-- Event List Container -->
       <div id="eventList" class="hidden">
