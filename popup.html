@@ -15,8 +15,10 @@
       <div id="no-date-notice" class="hidden">Select a date to chase!</div>
       <div class="countdown">
         <input type="text" id="eventName" placeholder="Enter event name" />
-        <div id="days-left"></div>
-        <div class="text-info">days remaining!</div>
+        <div id="days-container">
+          <span id="days-left"></span>
+          <span id="time-label"></span>
+        </div>
       </div>
       <hr />
       <div class="info">The clock is ticking until</div>
@@ -28,16 +30,17 @@
         <option value="working">Weekdays Only (Mon-Fri)</option>
       </select>
 
+      <label for="displayType">Show remaining as:</label>
+      <select id="displayType">
+        <option value="days">Days</option>
+        <option value="weeks">Weeks</option>
+        <option value="months">Months</option>
+      </select>
+
       <!-- Event List Button -->
       <button id="listButton" class="top-right-button">
         <i class="fa-solid fa-list-check"></i>
       </button>
-
-      <!-- Event List Container -->
-      <div id="eventList" class="hidden">
-        <h3>Event List</h3>
-        <ul id="eventItems"></ul>
-      </div>
 
       <!-- Event List Container -->
       <div id="eventList" class="hidden">
