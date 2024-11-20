@@ -70,7 +70,8 @@ body {
 }
 input#endDate,
 input#eventName,
-select#countType {
+select#countType,
+select#displayType {
   width: 100%;
   padding: 4px 9px;
   margin: 10px auto;
@@ -90,19 +91,20 @@ select#countType {
 }
 
 #days-left {
-  font-size: 22px;
-  transition: all 0.5s ease;
+  font-size: 30px;
+  transition: 0.5s ease;
+  color: #049e3f;
+  font-weight: 700;
+}
+
+#time-label {
+  font-size: 12px;
+  transition: 0.5s ease;
   color: #049e3f;
   font-weight: 600;
 }
-
 .countdown {
   margin-bottom: 12px;
-}
-
-.text-info {
-  font-size: 11px;
-  margin-top: 6px;
 }
 
 .updated-date {
@@ -128,10 +130,13 @@ input#eventName {
   width: fit-content;
 }
 
-select#countType {
+select#countType,
+select#displayType {
   border-color: #eaeaea;
   text-align: center;
-  width: fit-content;
+  width: 100%;
+  padding: 4px 9px;
+  margin: 10px auto;
 }
 
 /* Style for the top-right button */
