@@ -23,15 +23,17 @@ window.addEventListener("load", function () {
   document.getElementById("displayType").value = savedDisplayType;
 
   initializeExtensionState();
-});
 
-// Add listeners for user inputs to trigger saveTheInputs function
-document.getElementById("endDate").addEventListener("change", saveTheInputs);
-document.getElementById("eventName").addEventListener("input", saveTheInputs);
-document.getElementById("countType").addEventListener("change", saveTheInputs);
-document
-  .getElementById("displayType")
-  .addEventListener("change", saveTheInputs);
+  // Add listeners for user inputs to trigger saveTheInputs function
+  document.getElementById("endDate").addEventListener("change", saveTheInputs);
+  document.getElementById("eventName").addEventListener("input", saveTheInputs);
+  document
+    .getElementById("countType")
+    .addEventListener("change", saveTheInputs);
+  document
+    .getElementById("displayType")
+    .addEventListener("change", saveTheInputs);
+});
 
 // Function to save user input to localStorage
 function saveTheInputs() {
@@ -160,7 +162,7 @@ function updateIcon(daysLeft, displayType) {
     iconPath = "assets/16x16.png";
   }
 
-  // Update the Chrome extension icon and badge
+  // Update the Chrome extension icon and badge text
   chrome.action.setIcon({ path: iconPath });
   chrome.action.setBadgeText({ text: iconText });
   chrome.action.setBadgeBackgroundColor({ color: "#294fa7" });

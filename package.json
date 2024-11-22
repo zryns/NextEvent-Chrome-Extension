@@ -1,0 +1,24 @@
+{
+  "name": "nextevent-chrome-extension",
+  "version": "1.0.0",
+  "description": "NextEvent is a Chrome extension that helps you track important events by displaying a countdown right in your browser. Stay on top of deadlines, milestones, or upcoming celebrations with this simple and intuitive countdown timer.",
+  "main": "popup.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+    "testEnvironment": "jest-environment-jsdom",
+    "setupFiles": [
+      "./jest.setup.js"
+    ]
+  }
+}
